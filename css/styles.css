@@ -2,20 +2,24 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image: linear-gradient(to bottom right, rgb(54, 85, 143), rgb(68, 161, 160));
 }
 
 header {
-    background-color: gray;
+    background: none;
     padding: 40px;
     height: 5vh;
     display: flex;
     align-items: center;
+    font-size: 2rem;
+    color: white;
 }
 
 main {
@@ -24,19 +28,26 @@ main {
 
 footer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-shrink: 0;
     height: 5vh;
     padding: 40px;
-    background-color: gray;
+    background: none;
     align-items: center;
     justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+footer img {
+    width: 40%;
+    height: 40%;
 }
 
 .container {
-    background-color: yellowgreen;
+    background: none;
     display: flex;
-    height: 82.78vh;
+    height: 84.51vh;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -45,20 +56,22 @@ footer {
 .calculator-body {
     width: 28vw;
     height: 70vh;
-    background-color: white;
+    background-color: rgb(61,74,93);
     display: flex;
     flex-direction: column ;
     align-items: center;
+    border-radius: 5%;
 }
 
 .calculator-display {
-    background-color: gray;
-    margin-top: 25px;
+    background-color: rgb(116,206,233);
+    margin-top: 45px;
     width: 25vw;
     height: 15vh;
     display: flex;
     align-items: end;
     justify-content: end;
+    border-radius: 5%;
 }
 
 .calculator-display span {
@@ -68,9 +81,8 @@ footer {
 }
 
 .calculator-buttons {
-    background-color: gray;
-    margin-top: 40px;
-    width: 89.2%;
+    margin-top: 25px;
+    width: 95%;
     height: 63%;
     display: flex;
     flex-direction: row;
@@ -78,13 +90,47 @@ footer {
     justify-content: center;
 }
 
+.clear {
+    display: flex;
+    flex-direction: column;
+}
+
 .clearButton {
-    height: 35vh;
+    height: 29.3vh;
+    border: none;
+    border-radius: 5%;
+}
+
+.operator, .floating {
+    background-color: rgb(64, 64, 64);
+}
+
+.operator:hover, .floating:hover {
+    background-color: rgb(50, 50, 50);
+}
+
+.backspace, .clearButton, .equal {
+    background-color: rgb(223,59,79);
+}
+
+.backspace:hover, .clearButton:hover, .equal:hover {
+    background-color: rgb(127, 36, 47);
 }
 
 button {
     margin: 7px;
-    width: 70px;
-    height: 70px;
+    margin-left: 13.5px;
+    margin-top: 25px;
+    width: 80px;
+    height: 80px;
     font-size: 6vh;
+    border: none;
+    border-radius: 10%;
+    color: white;
+    background-color: gray;
+}
+
+button:hover {
+    background-color: rgb(79, 79, 79);
+    cursor: pointer;
 }
